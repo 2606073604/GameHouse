@@ -1,0 +1,97 @@
+.navigation_logo a {
+    background: url(./../img/logo.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: 540px;
+    text-indent: -999px;
+}
+.logo {
+    width: 60px;
+}
+.layui-bg-cyan ul li a {
+    text-decoration: none;
+}
+.foot {
+    color: rgb(193, 198, 205);
+}
+.foot ul li a {
+    text-decoration: none;
+    color: rgb(193, 198, 205);
+}
+.foot ul li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.foot .foot2 div a {
+    text-decoration: none;
+    color: rgb(193, 198, 205);
+}
+.foot .foot2 div a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.foot .foot3 div a {
+    text-decoration: none;
+    color: rgb(193, 198, 205);
+}
+.foot .foot3 div a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.mod_copyright .links a {
+    text-decoration: none;
+    color: rgb(193, 198, 205);
+}
+.mod_copyright .links a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.foot-div ul li:first-child {
+    font-weight: 800;
+}
+
+.foot-div ul li {
+    list-style: none;
+    margin: 10px 20px 0;
+}
+
+.foot-div {
+    border-right: 1px solid rgb(193, 198, 205);
+}
+
+.foot-div:last-child {
+    border-right: none;
+}
+
+.foot1 {
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(193, 198, 205);
+}
+
+.foot2 {
+    padding-top: 20px;
+}
+
+.foot3 {
+    padding-bottom: 20px;
+}
+
+.foot2 div {
+    padding: 5px 0;
+}
+
+.foot2 div:first-child {
+    padding-left: 25px;
+}
+
+.foot3 div {
+    padding: 5px 0;
+}
+
+.foot3 div:first-child {
+    padding-left: 25px;
+}
+
+.mod_copyright {
+    text-align: center;
+    padding-top: 20px;
+}

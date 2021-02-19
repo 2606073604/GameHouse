@@ -1,0 +1,136 @@
+body {
+    font-family: 'Microsoft YaHei';
+    background:#030303 url(../img/body背景.jpg) center 0 no-repeat;
+}
+
+body .main {
+    background-color: #ffffff;
+}
+
+.main {
+    color: #2F4056;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#test1 {
+    margin-left: 20px;
+    display: inline-block;
+}
+
+table {
+    margin: 5px auto 0px; 
+}
+
+.gameinfor {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.gameinfor a {
+    text-decoration: none;
+}
+
+.bottom {
+    margin-top: 10px;
+}
+
+.img {
+    width: 250px;
+    height: 332px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.img img {
+    transition: all .3s;
+}
+
+.img img:hover {
+    transform: scale(1.1);
+}
+
+.gamenews {
+    margin-left: 10px;
+    display: inline-block;
+    width: 295px;
+    height: 450px;
+    margin-bottom: 15px;
+    position: absolute;
+}
+
+.gamenews ul li a {
+    text-decoration: none; 
+}
+
+/* 搜索框 */
+.searchkuang {
+    display: inline-block;
+    width: 18%;
+    margin-left: 5px;
+}
+.search {
+    width:97%;
+    margin: 0 auto;
+}
+.search .searchkuang123 {
+    display: inline-block;
+    width: 32px;
+    height: 38px;
+    background: url(./../img/搜索雪碧图.png) no-repeat;
+    text-indent: -999px;
+}
+.search .searchkuang123:hover {
+    background-position: 0px -38px;
+}
+.hotsearch {
+    display: inline-block; 
+}
+.hotsearch a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+}
+.hotsearch span {
+    margin-right: 10px;
+    color: black;
+    font-weight: bold;
+}
+.hotsearch a:hover {
+    color: rgb(243, 63, 9);
+    margin-right: 10px;
+}
+.search {
+    margin-bottom: 20px;
+    background: #e5e5e5;
+    border: 1px solid #cfd0d0;
+    padding: 0 10px;
+}
+
+/* 关灯特效CSS */
+.close_light {
+    position: absolute;
+    left: 1350px;
+    top: 7px;
+    display: inline-block;
+    width: 59px;
+    height: 52px;
+
+}
+
+.close_light .gdtb {
+    width: 100%;
+    display: inline-block;
+    height: 25px;
+    background: url(./../img/关灯效果.png) center 0 no-repeat;
+}
+.close_light .gdwz {
+    width: 100%;
+    display: inline-block;
+    height: 21px;
+    background: url(./../img/关灯特效.png) center 0 no-repeat;
+}
+
+.main a {
+    color: black;
+}

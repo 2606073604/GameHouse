@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHouse</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/layui/css/layui.css">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/gameninforanddocument.css">
+    <script src="./assets/template-web.js"></script>
+    <script src="./assets/jquery-3.5.1.js"></script>
+    <script src="./assets/layui/layui.all.js"></script>
+    <script src="./assets/main.js"></script>
+    <script src="./js/gameinforanddocument.js"></script>
+</head>
+
+<body>
+    <div class="layui-bg-cyan">
+        <ul class="layui-nav layui-main layui-bg-cyan" lay-filter="">
+            <li class="navigation_logo layui-nav-item"><a href="./All_posts.html" class="logo">Gamehouse</a></li>
+            <li class="layui-nav-item dbbs"><a href="./gamebytype.html"
+                    onclick='localStorage.setItem("gametype", $(this).text().trim());'>单机游戏</a></li>
+            <li class="layui-nav-item dbbs"><a href="./gamebytype.html"
+                    onclick='localStorage.setItem("gametype", $(this).text().trim());'>主机游戏</a></li>
+            <li class="layui-nav-item dbbs"><a href="./gamebytype.html"
+                    onclick='localStorage.setItem("gametype", $(this).text().trim());'>网络游戏</a></li>
+            <li class="layui-nav-item dbbs"><a href="./gamebytype.html"
+                    onclick='localStorage.setItem("gametype", $(this).text().trim());'>手机游戏</a></li>
+            <li class="layui-nav-item dbbs denglu1"><a href="./login.html"><i class="layui-icon layui-icon-user"></i>
+                    未登录</a></li>
+            <li class="layui-nav-item dbbs denglu2"><a href="./index.html"><i class="layui-icon layui-icon-user"></i>
+                    个人中心</a></li>
+        </ul>
+    </div>
+    <a href="JavaScript:;" class="close_light">
+        <i class="gdtb"></i>
+        <i class="gdwz"></i>
+    </a>
+
+
+    <div class="layui-main main gamelittleinfor">
+        <script type="text/html" id="html-data">
+        {{ each data}}
+        <div class="layui-row gameinfor sywz">
+            <div class="layui-col-md3" style="padding-left: 10px;">
+                <img src="{{ $value.gameurl }}" alt="">
+            </div>
+            <div class="layui-col-md6">
+                <div>
+                    <h1>{{ $value.gamename }}</h1>
+                </div>
+                <div><strong>Sekiro: Shadows Die Twice</strong></div>
+                <div class="gametime"><i class="layui-icon layui-icon-time" style="font-size: 20px; color:gray;"></i>
+                    游戏时长:26.5小时(主线)</div>
+                <div class="font">上市时间: <i>{{ $value.gamedate }}</i></div>
+                <div class="font">官方中文: <i>支持</i></div>
+                <div class="font">游戏类型: <i>{{ $value.gametype }}</i></div>
+                <div class="font">制作发行: <i>{{ $value.developers }}</i></div>
+            </div>
+            <div class="layui-col-md2" style="margin-top: 10px;">
+                <div class="gamenews">
+                    <ul>
+                        <li style="line-height: 40px; margin: 10px 10px;">
+                            <h3>其他热门游戏:</h3>
+                        </li>
+                        <li style="line-height: 30px; margin: 0px 10px;"><a href="./gameinforanddocument.html"
+                            onclick='localStorage.setItem("gamename", $(this).text().trim());'>暗黑地牢</a></li>
+                        <li style="line-height: 30px; margin: 0px 10px;"><a href="./gameinforanddocument.html"
+                            onclick='localStorage.setItem("gamename", $(this).text().trim());'>堡垒之夜</a></li>
+                        <li style="line-height: 30px; margin: 0px 10px;"><a href="./gameinforanddocument.html"
+                            onclick='localStorage.setItem("gamename", $(this).text().trim());'>只狼:影逝二度</a></li>
+                        <li style="line-height: 30px; margin: 0px 10px;"><a href="./gameinforanddocument.html"
+                            onclick='localStorage.setItem("gamename", $(this).text().trim());'>和平精英</a></li>
+                        <li style="line-height: 30px; margin: 0px 10px;"><a href="./gameinforanddocument.html"
+                            onclick='localStorage.setItem("gamename", $(this).text().trim());'>问道</a></li>
+                        <li style="line-height: 30px; margin: 0px 10px;"><a href="./gameinforanddocument.html"
+                            onclick='localStorage.setItem("gamename", $(this).text().trim());'>死亡搁浅</a></li>
+                        <li style="line-height: 30px; margin: 0px 10px;"><a href="./gameinforanddocument.html"
+                            onclick='localStorage.setItem("gamename", $(this).text().trim());'>实况足球</a></li>
+                        <li style="line-height: 30px; margin: 0px 10px;"><a href="./gameinforanddocument.html"
+                            onclick='localStorage.setItem("gamename", $(this).text().trim());'>王者荣耀</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <blockquote class="layui-elem-quote layui-quote-nm jianjie sywz" style="margin-left: 10px;">
+            <h2>游戏简介:</h2>
+            {{ $value.synopsis }}
+        </blockquote>
+        {{ /each }}
+        </script>
+    </div>
+
+
+
+
+    <div class="layui-main main" style="margin-top: 0px;padding-top: 0px;">
+        <div class="pinglunbyme">
+            <label for="" style="font-size: 20px;">我来说两句:</label><br>
+            <input type="text" class="text" placeholder="请输入评论内容!" style="padding-left: 20px; font-size: 16px;">
+            <input type="submit" value="发布评论" class="btn" style="text-align: center;line-height: 10px;">
+        </div>
+        <div class="layui-tab">
+            <ul class="layui-tab-title">
+                <li class="layui-this">玩家评论</li>
+                <!-- <li>玩法攻略</li> -->
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <ul class="gamepinglun">
+                        <script type="text/html" id="html-data1">
+                        {{ each data}}
+                        <li>
+                            <div class="layui-card">
+                                <div class="layui-card-header"><strong>DoraSimon:</strong></div>
+                                <div class="layui-card-body pinglun">
+                                    {{ $value.content }}
+                                </div>
+                                <div>
+                                    <div class="layui-row" style="position: relative; left: 750px;">
+                                        <div class="layui-col-md1">
+                                            <a href="">
+                                                举报
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-md1">
+                                            <a href="">
+                                                回复
+                                            </a>
+                                        </div>
+                                        <div class="layui-col-md1">
+                                            <a href="">
+                                                2020-12-12
+                                            </a>
+
+                                        </div>
+                                        <div class="layui-col-md1">
+                                            <a href="">
+                                                <i class="layui-icon layui-icon-praise"></i>
+                                                2578
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="layui-bg-black">
+                        </li>
+                        {{ /each }}
+                        </script>
+                    </ul>
+                </div>
+                <div class="layui-tab-item">
+                    <ul class="document gamewenzhang">
+                        <script type="text/html" id="html-data2">
+                        {{ each data}}
+                        <li>
+                            <div class="layui-row">
+                                <div class="layui-col-md5">
+                                    <a href="">
+                                        {{ $value.title }}
+                                    </a>
+                                </div>
+                                <!-- <div class="layui-col-md2">
+                                    <a href="">
+                                        {{ $value.username }}
+                                    </a>
+
+                                </div> -->
+                                <div class="layui-col-md4">
+                                    <a href="">
+                                        {{ $value.createtime }}
+                                    </a>
+
+                                </div>
+                                <div class="layui-col-md1">
+                                    <a href="">
+                                        <i class="layui-icon layui-icon-praise"></i>
+                                        3258
+                                    </a>
+                                </div>
+                            </div>
+                            <hr class="layui-bg-black">
+                        </li>
+                        {{ /each }}
+                        </script>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+        layui.use('element', function () {
+            var element = layui.element;
+        });
+    </script>
+
+
+    <div class="layui-bg-cyan bottom">
+        <div class="layui-main foot">
+            <div class="row foot1">
+                <div class="col-md-3 foot-div">
+                    <ul>
+                        <li><a href="">单击游戏</a></li>
+                        <li><a href="">游戏资讯</a></li>
+                        <li><a href="">游戏测评</a></li>
+                        <li><a href="">游戏下载</a></li>
+                        <li><a href="">单击排行榜</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 foot-div">
+                    <ul>
+                        <li><a href="">网络游戏</a></li>
+                        <li><a href="">新闻资讯</a></li>
+                        <li><a href="">试玩测评</a></li>
+                        <li><a href="">产业观察</a></li>
+                        <li><a href="">精彩栏目</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 foot-div">
+                    <ul>
+                        <li><a href="">手机游戏</a></li>
+                        <li><a href="">手游频道</a></li>
+                        <li><a href="">手游攻略</a></li>
+                        <li><a href="">手游下载</a></li>
+                        <li><a href="">手游产业</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 foot-div">
+                    <ul>
+                        <li><a href="">主机游戏</a></li>
+                        <li><a href="">PS5</a></li>
+                        <li><a href="">XSX</a></li>
+                        <li><a href="">主机硬件</a></li>
+                        <li><a href="">电玩资讯</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row foot2">
+                <div class="col-md-1">友情链接:</div>
+                <div class="col-md-1"><a href="">单击游戏</a></div>
+                <div class="col-md-1"><a href="">多玩游戏</a></div>
+                <div class="col-md-1"><a href="">腾讯游戏</a></div>
+                <div class="col-md-1"><a href="">游侠网</a></div>
+                <div class="col-md-1"><a href="">迅游网</a></div>
+                <div class="col-md-1"><a href="">虎牙直播</a></div>
+                <div class="col-md-1"><a href="">游侠网络</a></div>
+                <div class="col-md-1"><a href="">游戏狗</a></div>
+                <div class="col-md-1"><a href="">斗鱼直播</a></div>
+                <div class="col-md-1"><a href="">07073网游</a></div>
+                <div class="col-md-1"><a href="">逗游网</a></div>
+            </div>
+            <div class="row foot3">
+                <div class="col-md-1"><a href="">PC6官方</a></div>
+                <div class="col-md-1"><a href="">91单击游戏</a></div>
+                <div class="col-md-1"><a href="">新浪爱问</a></div>
+                <div class="col-md-1"><a href="">贪玩游戏</a></div>
+                <div class="col-md-1"><a href="">3DM游戏网</a></div>
+                <div class="col-md-1"><a href="">龙珠直播</a></div>
+            </div>
+            <div class="mod_copyright">
+                <div class="links">
+                    <a href="#">关于本站</a> | <a href="#">网站招聘</a> | <a href="#">联系我们</a> | <a href="#">新浪微博</a>| <a
+                        href="#">手机客户端</a>
+                </div>
+                <div class="copyright">
+                    地址：陕西省西安市奥林匹克大厦A做8楼 邮编：100096 电话：400-618-4000 传真：029-89564386 邮箱: inlettkeji.cn <br>
+                    陕ICP备08001421号京公网安备110108007702
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

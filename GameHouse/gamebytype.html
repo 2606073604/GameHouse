@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHouse</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/layui/css/layui.css">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/gamebytype.css">
+    <script src="./assets/template-web.js"></script>
+    <script src="./assets/jquery-3.5.1.js"></script>
+    <script src="./assets/layui/layui.all.js"></script>
+    <script src="./assets/main.js"></script>
+    <script src="./js/gamebytype.js"></script>
+</head>
+
+<body>
+    <div class="layui-bg-cyan">
+        <ul class="layui-nav layui-main layui-bg-cyan" lay-filter="">
+            <li class="navigation_logo layui-nav-item"><a href="./All_posts.html" class="logo">Gamehouse</a></li>
+            <li class="layui-nav-item dbbs"><a href="./gamebytype.html"
+                    onclick='localStorage.setItem("gametype", $(this).text().trim());'>单机游戏</a></li>
+            <li class="layui-nav-item dbbs"><a href="./gamebytype.html"
+                    onclick='localStorage.setItem("gametype", $(this).text().trim());'>主机游戏</a></li>
+            <li class="layui-nav-item dbbs"><a href="./gamebytype.html"
+                    onclick='localStorage.setItem("gametype", $(this).text().trim());'>网络游戏</a></li>
+            <li class="layui-nav-item dbbs"><a href="./gamebytype.html"
+                    onclick='localStorage.setItem("gametype", $(this).text().trim());'>手机游戏</a></li>
+            <li class="layui-nav-item dbbs denglu1"><a href="./login.html"><i class="layui-icon layui-icon-user"></i>
+                    未登录</a></li>
+            <li class="layui-nav-item dbbs denglu2"><a href="./index.html"><i class="layui-icon layui-icon-user"></i>
+                    个人中心</a></li>
+        </ul>
+    </div>
+    <a href="JavaScript:;" class="close_light">
+        <i class="gdtb"></i>
+        <i class="gdwz"></i>
+    </a>
+
+
+    <div class="layui-main main">
+        <h2 style="padding-left: 10px;margin-top: 10px; padding-top: 10px;">热门游戏</h2>
+        <div class="search">
+            <label for="tiezi">搜游戏:</label>
+            <input type="text" name="title" required lay-verify="required" placeholder="请输入您要搜索的游戏!" autocomplete="off"
+                class="layui-input searchkuang" id="tiezi">
+            <input class="searchkuang123" type="submit" />
+            <div class="hotsearch">
+                <span>热门搜索:</span>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("gamename", $(this).text().trim());'>暗黑地牢</a>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("ga mename", $(this).text().trim());'>堡垒之夜</a>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("gamename", $(this).text().trim());'>消逝的光芒</a>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("gamename", $(this).text().trim());'>实况足球</a>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("gamename", $(this).text().trim());'>王者荣耀</a>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("gamename", $(this).text().trim());'>只狼:影逝二度</a>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("gamename", $(this).text().trim());'>我的世界</a>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("gamename", $(this).text().trim());'>和平精英</a>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("gamename", $(this).text().trim());'>死亡搁浅</a>
+            </div>
+        </div>
+
+        <!-- 轮播图 -->
+        <div class="layui-carousel" id="test1">
+            <div carousel-item>
+                <div><a href=""><img src="./img/展示图4.jpg" alt=""></a></div>
+                <div><a href=""><img src="./img/展示图5.jpg" alt=""></a></div>
+                <div><a href=""><img src="./img/展示图6.jpg" alt=""></a></div>
+                <div><a href=""><img src="./img/展示图7.jpg" alt=""></a></div>
+                <div><a href=""><img src="./img/展示图8.jpg" alt=""></a></div>
+            </div>
+        </div>
+        <div class="gamenews">
+            <ul>
+                <li style="line-height: 40px; margin: 10px 10px;">
+                    <h3>热门游戏帖子:</h3>
+                </li>
+                <li style="line-height: 30px; margin: 0px 10px;"><a href="">国产恐怖游戏《回门》今日发售民国背景小镇怪谈</a></li>
+                <li style="line-height: 30px; margin: 0px 10px;"><a href="">《索尼克》游戏系列配音宣布退出角色官方表达感谢</a></li>
+                <li style="line-height: 30px; margin: 0px 10px;"><a href="">爆料股票软件私自出售用户Gamestop股票遭官方否认</a></li>
+                <li style="line-height: 30px; margin: 0px 10px;"><a href="">《生化危机Re:Verse》超长封测实机演示精彩刺激的多人对战</a></li>
+                <li style="line-height: 30px; margin: 0px 10px;"><a href="">《生化危机Re:Verse》PS4演示艾达王闪转腾挪</a></li>
+
+            </ul>
+        </div>
+        <!-- 展示图表格 -->
+        <table>
+            <tr>
+                <td rowspan="2"><a href=""><img src="./img/展示图1.jpg" alt=""></a></td>
+                <td><a href=""><img src="./img/展示图2.jpg" alt=""></a></td>
+            </tr>
+            <tr>
+                <td><a href=""><img src="./img/展示图3.jpg" alt=""></a></td>
+            </tr>
+        </table>
+        <!-- 所有该类的游戏列表 -->
+        <h2 style="margin-left: 10px;" class="gamebiaoti">单机游戏:</h2>
+        <div class="layui-row layui-col-space12 gameinfor gameinforbytype">
+            <script type="text/html" id="html-data">
+                {{ each data}}
+            <div class="layui-col-md3 gameinfor ">
+                <div class="img">
+                    <a href=""><img src="{{ $value.gameurl }}" alt=""></a>
+                </div>
+                <a href="./gameinforanddocument.html" onclick='localStorage.setItem("gamename", $(this).text().trim());'>
+                    <h3>{{ $value.gamename }}</h3>
+                </a>
+                <label for="" >{{ $value.gamedate | formatTime }}</label>
+                
+            </div>
+            {{ /each }}
+                </script>
+        </div>
+    </div>
+
+
+    <div class="layui-bg-cyan bottom">
+        <div class="layui-main foot">
+            <div class="row foot1">
+                <div class="col-md-3 foot-div">
+                    <ul>
+                        <li><a href="">单击游戏</a></li>
+                        <li><a href="">游戏资讯</a></li>
+                        <li><a href="">游戏测评</a></li>
+                        <li><a href="">游戏下载</a></li>
+                        <li><a href="">单击排行榜</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 foot-div">
+                    <ul>
+                        <li><a href="">网络游戏</a></li>
+                        <li><a href="">新闻资讯</a></li>
+                        <li><a href="">试玩测评</a></li>
+                        <li><a href="">产业观察</a></li>
+                        <li><a href="">精彩栏目</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 foot-div">
+                    <ul>
+                        <li><a href="">手机游戏</a></li>
+                        <li><a href="">手游频道</a></li>
+                        <li><a href="">手游攻略</a></li>
+                        <li><a href="">手游下载</a></li>
+                        <li><a href="">手游产业</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 foot-div">
+                    <ul>
+                        <li><a href="">主机游戏</a></li>
+                        <li><a href="">PS5</a></li>
+                        <li><a href="">XSX</a></li>
+                        <li><a href="">主机硬件</a></li>
+                        <li><a href="">电玩资讯</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row foot2">
+                <div class="col-md-1">友情链接:</div>
+                <div class="col-md-1"><a href="">单击游戏</a></div>
+                <div class="col-md-1"><a href="">多玩游戏</a></div>
+                <div class="col-md-1"><a href="">腾讯游戏</a></div>
+                <div class="col-md-1"><a href="">游侠网</a></div>
+                <div class="col-md-1"><a href="">迅游网</a></div>
+                <div class="col-md-1"><a href="">虎牙直播</a></div>
+                <div class="col-md-1"><a href="">游侠网络</a></div>
+                <div class="col-md-1"><a href="">游戏狗</a></div>
+                <div class="col-md-1"><a href="">斗鱼直播</a></div>
+                <div class="col-md-1"><a href="">07073网游</a></div>
+                <div class="col-md-1"><a href="">逗游网</a></div>
+            </div>
+            <div class="row foot3">
+                <div class="col-md-1"><a href="">PC6官方</a></div>
+                <div class="col-md-1"><a href="">91单击游戏</a></div>
+                <div class="col-md-1"><a href="">新浪爱问</a></div>
+                <div class="col-md-1"><a href="">贪玩游戏</a></div>
+                <div class="col-md-1"><a href="">3DM游戏网</a></div>
+                <div class="col-md-1"><a href="">龙珠直播</a></div>
+            </div>
+            <div class="mod_copyright">
+                <div class="links">
+                    <a href="#">关于本站</a> | <a href="#">网站招聘</a> | <a href="#">联系我们</a> | <a href="#">新浪微博</a>| <a
+                        href="#">手机客户端</a>
+                </div>
+                <div class="copyright">
+                    地址：陕西省西安市奥林匹克大厦A做8楼 邮编：100096 电话：400-618-4000 传真：029-89564386 邮箱: inlettkeji.cn <br>
+                    陕ICP备08001421号京公网安备110108007702
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/build/layui.js"></script>
+    <script>
+        layui.use('laypage', function () {
+            var laypage = layui.laypage;
+
+            //执行一个laypage实例
+            laypage.render({
+                elem: 'gameinfor' //注意，这里的 test1 是 ID，不用加 # 号
+                , count: 50 //数据总数，从服务端得到
+                , limit: 6  //数据的数量
+            });
+        });
+    </script>
+    <script>
+        layui.use('carousel', function () {
+            var carousel = layui.carousel;
+            //建造实例
+            carousel.render({
+                elem: '#test1'
+                , width: '800px' //设置容器宽度
+                , height: '450px'
+                , arrow: 'always' //始终显示箭头
+                // , anim: 'updown' //切换动画方式
+            });
+        });
+    </script>
+</body>
+
+
+</html>

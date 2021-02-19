@@ -1,0 +1,17 @@
+body{
+    padding: 20px;
+}
+.layui-card{
+    margin: 10px 0;
+}
+.layui-form{
+    width: 80%;
+    text-align: center;
+}
+.layui-table th{
+    text-align: center;
+}
+.media-left img{
+    text-align: center;
+    border-radius: 50px;
+}

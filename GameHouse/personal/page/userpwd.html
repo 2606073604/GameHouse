@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>重置密码</title>
+    <link rel="stylesheet" href="./../../assets/layui/css/layui.css">
+    <script src="./../../assets/layui/layui.all.js"></script>
+    <script src="./../../assets/jquery-3.5.1.js"></script>
+    <script src="./../../assets/baseAPI.js"></script>
+    <script src="./../../js/page/userpwd.js"></script>
+    <link rel="stylesheet" href="./../../css/page/重置密码.css">
+</head>
+
+<body class="layui-bg-gray">
+    <div class="layui-card">
+        <div class="layui-card-header">重置密码</div>
+        <div class="layui-card-body">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">原密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="oldpwd" required lay-verify="required|upwd" placeholder="请输原密码"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">新密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="newpwd" required lay-verify="required|upwd|newpwd"
+                            placeholder="请输入新密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">重复密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="aginpwd" required lay-verify="required|upwd" placeholder="请再次确认密码"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit="" lay-filter='update'>修改密码</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<!-- <script>
+    let form = layui.form;
+    //自定义验证规则
+    form.verify({
+        upwd: [
+            /^[\S]{6,12}$/
+            , '密码必须6到12位，且不能出现空格'
+        ]
+    });
+    form.on('submit(update)', (data) => {
+        $.ajax({
+            type: "POST",
+            url: "/user/resetpwd",
+            data: data.field,
+            headers: {
+                Authorization: `${sessionStorage.getItem("usertoken") || ""}`
+            },
+            success: function (res) {
+
+                // 判断如果根据token获取用户信息失败的话，要跳转到登录界面，
+                if (res.status !== 0) {
+                    layer.open({
+                        title: '提示',
+                        icon: 2,
+                        content: "用户登录信息无效，请重新登录！",
+                        time: 2000,
+                        end: function () {
+                            location.href = "./login.html";
+                        }
+                    });
+                } else {
+                    layer.open({
+                        title: '提示',
+                        icon: 1,
+                        content: res.msg,
+                        time: 2000,
+                        end: function () {
+                            // location.href = "./login.html";
+                        }
+                    });
+                    // renderAvatar(res.data);
+                }
+            }
+        });
+        console.log(data.field);
+        return false;
+    })
+
+</script> -->
+
+</html>

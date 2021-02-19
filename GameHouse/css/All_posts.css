@@ -1,0 +1,227 @@
+/* 关灯效果的实现 */
+.close_light {
+    position: absolute;
+    left: 1330px;
+    top: 7px;
+    display: inline-block;
+    width: 59px;
+    height: 52px;
+
+}
+.close_light .gdtb {
+    width: 100%;
+    display: inline-block;
+    height: 25px;
+    background: url(./../img/关灯效果.png) center 0 no-repeat;
+}
+.close_light .gdwz {
+    width: 100%;
+    display: inline-block;
+    height: 21px;
+    background: url(./../img/关灯特效.png) center 0 no-repeat;
+}
+.close_light .gdtbbh {
+    background-position: center -25px;
+}
+.close_light .gdwzbh {
+    background-position: center -21px;
+}
+
+.xddw {
+    position: relative;
+}
+.bh {
+    background-color: rgb(36, 36, 36) !important;
+    color: #ccc  !important;
+}
+.bh:hover {
+    text-decoration: underline  !important;
+}
+/* 关灯效果的结束 */
+.all_posts {
+    margin-top: 20px;
+    background: #f2f2f3;
+    padding: 10px 20px 0;
+}
+body {
+    background: #030303 url(./../img/body背景.jpg) center 0 no-repeat;
+}
+.searchkuang {
+    display: inline-block;
+    width: 18%;
+    margin-left: 5px;
+}
+.search .searchkuang123 {
+    display: inline-block;
+    width: 32px;
+    height: 38px;
+    background: url(./../img/搜索雪碧图.png) no-repeat;
+    text-indent: -999px;
+}
+.search .searchkuang123:hover {
+    background-position: 0px -38px;
+}
+.hotsearch {
+    display: inline-block; 
+}
+.hotsearch a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+}
+.hotsearch span {
+    margin-right: 10px;
+    color: black;
+    font-weight: bold;
+}
+.hotsearch a:hover {
+    color: rgb(243, 63, 9);
+    margin-right: 10px;
+}
+.search {
+    margin-bottom: 20px;
+    background: #e5e5e5;
+    border: 1px solid #cfd0d0;
+    padding: 0 10px;
+}
+.alldocument {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.sywz {
+    display: inline-block;
+    width: 60%;
+}
+.sywz_img {
+    position: absolute;
+    top: 10px;
+    display: inline-block;
+    width: 35%;
+    height: 100%;
+    margin-left: 50px;
+}
+.sywz ul .layui-this{
+    background-color: rgb(243, 63, 9);
+    color: white;
+    font-weight: bold;
+}
+.sywz ul li{
+    font-weight: bold;
+    padding: 0px 37px;
+    font-size: 14px;
+}
+.sywz  .nav ul li {
+    padding: 0px 0px;
+}
+
+
+
+
+
+.sywz .post_neirong li {
+    padding: 0px 0px;
+}
+
+.sywz .post_neirong li .tzbt {
+    height: 35px;
+    padding-top: 5px;
+    font-size: 18px;
+    font-family: 宋体;
+}
+.sywz .post_neirong li .tzbt a:first-child {
+    color: rgb(243, 63, 9);
+}
+.sywz .post_neirong li .tzbt a:first-child:hover {
+    color: rgb(245, 8, 8);
+}
+.sywz .post_neirong li .tzbt a:last-child {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+.sywz .post_neirong li .tzbt a:last-child:hover {
+    color: rgb(243, 63, 9);
+}
+.sywz .post_neirong li .tzpt {
+    height: 130px;
+    margin-bottom: 20px;
+}
+.sywz .post_neirong li .tzpt img {
+    width: 90%;
+    height: 100%;
+}
+.sywz .post_neirong li .tzjj {
+    height: 40px;
+    margin-bottom: 70px;
+    margin-left: 20px;
+    font-size: 14px;
+    color: rgb(92, 87, 87);
+    text-overflow:ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+
+}
+.sywz .post_neirong li .tztime {
+    height: 20px;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #999;
+}
+.sywz .post_neirong li .tztime span:last-child {
+    margin-left: 30px;
+}
+.sywz .post_neirong li .tztime span:last-child span {
+    color: #999;
+    text-decoration: none;
+    margin-right: 20px;
+}
+.sywz .post_neirong li .tztime span:last-child span:last-child {
+    color: rgb(243, 63, 9);
+}
+.fgx {
+    border-bottom: 1px solid #ddd;
+}
+/* 排行榜模块 */
+.phb {
+    width: 100%;
+    margin-top: 15px;
+}
+.phb .phbhead {
+    height: 26px;
+    line-height: 26px;
+    background: url(./../img/排行榜雪碧图.gif) no-repeat;
+    padding-left: 23px;
+    color: #000;
+    font-size: 16px;
+}
+.phb .phbnr li:nth-child(-n+3) i {
+    color: coral;
+}
+.phb .phbnr i {
+    display: inline-block;
+    width: 20px;
+    height: 36px;
+    text-align: center;
+    text-indent: -5px;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Microsoft YaHei';
+}
+.phb .phbnr li {
+    height: 36px;
+    line-height: 36px;
+    border-bottom: 1px dotted #cecece;
+}
+.phb .phbnr li a {
+    font-weight: 500;
+    color: #151515;
+    text-decoration: none;
+}
+.phb .phbnr li a:hover {
+    color: rgb(243, 63, 9);
+    text-decoration: none;
+}

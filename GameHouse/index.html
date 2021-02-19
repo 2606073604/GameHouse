@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>游戏之家-个人首页</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./assets/layui/css/layui.css">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
+    <script src="./assets/template-web.js"></script>
+    <script src="./assets/jquery-3.5.1.js"></script>
+    <script src="./assets/layui/layui.all.js"></script>
+    <script src="./assets/baseAPI.js"></script>
+    <script src="./assets/main.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header layui-bg-cyan">
+            <ul class="layui-nav layui-main layui-bg-cyan" lay-filter="">
+                <li class="navigation_logo layui-nav-item"><a href="./All_posts.html" class="logo">Gamehouse</a></li>
+                <li class="layui-nav-item dbbs"><a href="./gamebytype.html"
+                        onclick='localStorage.setItem("gametype", $(this).text().trim());'>单机游戏</a></li>
+                <li class="layui-nav-item dbbs"><a href="./gamebytype.html"
+                        onclick='localStorage.setItem("gametype", $(this).text().trim());'>主机游戏</a></li>
+                <li class="layui-nav-item dbbs"><a href="./gamebytype.html"
+                        onclick='localStorage.setItem("gametype", $(this).text().trim());'>网络游戏</a></li>
+                <li class="layui-nav-item dbbs"><a href="./gamebytype.html"
+                        onclick='localStorage.setItem("gametype", $(this).text().trim());'>手机游戏</a></li>
+                <li class="layui-nav-item dbbs denglu1"><a href="./login.html"><i
+                            class="layui-icon layui-icon-user"></i>
+                        未登录</a></li>
+                <li class="layui-nav-item dbbs denglu2"><a href="./index.html"><i
+                            class="layui-icon layui-icon-user"></i> 个人中心</a></li>
+            </ul>
+
+            <div class="layui-side layui-bg-black">
+                <div class="layui-side-scroll">
+
+                    <ul class="layui-nav layui-nav-tree" lay-shrink="all">
+                        <li class="layui-nav-item">
+                            <a href="#">
+                                <i class="layui-icon layui-icon-list"></i> 我的信息
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="./personal/page/information.html" target="fm">
+                                        <i class="layui-icon layui-icon-search"></i> 基本信息</a></dd>
+                                <dd><a href="./personal/page/modifynews.html" target="fm">
+                                        <i class="layui-icon layui-icon-set-sm"></i> 修改信息</a></dd>
+                                <dd><a href="./personal/page/headportrait.html" target="fm">
+                                        <i class="layui-icon layui-icon-release"></i> 修改头像</a></dd>
+                                <dd><a href="./personal/page/userpwd.html" target="fm">
+                                        <i class="layui-icon layui-icon-password"></i> 重置密码</a></dd>
+                            </dl>
+                        </li>
+                        <li class="layui-nav-item">
+                            <a href="./personal/page/friends.html" target="fm">
+                                <i class="layui-icon layui-icon-friends"></i> 我的好友
+                            </a>
+                        </li>
+                        <li class="layui-nav-item">
+                            <a href="./personal/page/comment.html" target="fm">
+                                <i class="layui-icon layui-icon-reply-fill"></i> 我的评论
+                            </a>
+                        </li>
+                        <li class="layui-nav-item">
+                            <a href="#">
+                                <i class="layui-icon layui-icon-form"></i> 贴子管理
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="./personal/page/post.html" target="fm">
+                                        <i class="layui-icon layui-icon-search"></i> 发布贴子</a></dd>
+                                <dd><a href="./personal/page/mypost.html" target="fm">
+                                        <i class="layui-icon layui-icon-set-sm"></i> 我的贴子</a></dd>
+                            </dl>
+                        </li>
+                        <li class="layui-nav-item">
+                            <a href="#">
+                                <i class="layui-icon layui-icon-form"></i> 文章管理
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="./personal/page/postessay.html" target="fm">
+                                        <i class="layui-icon layui-icon-search"></i> 发布文章</a></dd>
+                                <dd><a href="./personal/page/essay.html" target="fm">
+                                        <i class="layui-icon layui-icon-set-sm"></i> 我的文章</a></dd>
+                            </dl>
+                        </li>
+                        <li class="layui-nav-item">
+                            <a href="#">
+                                <i class="layui-icon layui-icon-user"></i> 管理员界面
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="layui-body">
+                <!-- 内容主体区域 -->
+                <!-- src为基本信息页面的路径 -->
+                <iframe src="file:///C:/Users/lenovo/Desktop/GameHouse/GameHouse/personal/page/information.html"
+                    frameborder="0" name="fm">
+
+                </iframe>
+            </div>
+            <div class="layui-footer" style="background-color:#2F4056">
+                <!-- 底部固定区域 -->
+                <div class="copyright">
+                    地址：陕西省西安市奥林匹克大厦A做8楼 邮编：100096 电话：400-618-4000 传真：029-89564386 邮箱: inlettkeji.cn <br>
+                    陕ICP备08001421号京公网安备110108007702
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/layui/layui.all.js"></script>
+</body>
+
+</html>

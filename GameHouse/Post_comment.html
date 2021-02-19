@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHouse</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/base.css">
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="./assets/layui/css/layui.css">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/Post_comment.css">
+    <script src="./assets/template-web.js"></script>
+    <script src="./assets/jquery-3.5.1.js"></script>
+    <script src="./assets/layui/layui.all.js"></script>
+    <script src="./assets/main.js"></script>
+    <script src="./js/Post_comment.js"></script>
+</head>
+
+<body>
+    <!-- 导航栏区域 -->
+    <div class="layui-bg-cyan xddw">
+        <ul class="layui-nav layui-main layui-bg-cyan" lay-filter="">
+            <li class="navigation_logo layui-nav-item"><a href="./All_posts.html" class="logo">Gamehouse</a></li>
+            <li class="layui-nav-item dbbs"><a href="./gamebytype.html"
+                    onclick='localStorage.setItem("gametype", $(this).text().trim());'>单机游戏</a></li>
+            <li class="layui-nav-item dbbs"><a href="./gamebytype.html"
+                    onclick='localStorage.setItem("gametype", $(this).text().trim());'>主机游戏</a></li>
+            <li class="layui-nav-item dbbs"><a href="./gamebytype.html"
+                    onclick='localStorage.setItem("gametype", $(this).text().trim());'>网络游戏</a></li>
+            <li class="layui-nav-item dbbs"><a href="./gamebytype.html"
+                    onclick='localStorage.setItem("gametype", $(this).text().trim());'>手机游戏</a></li>
+            <li class="layui-nav-item dbbs denglu1"><a href="./login.html"><i class="layui-icon layui-icon-user"></i>
+                    未登录</a></li>
+            <li class="layui-nav-item dbbs denglu2"><a href="./index.html"><i class="layui-icon layui-icon-user"></i>
+                    个人中心</a></li>
+        </ul>
+        <!-- 关灯效果模块 -->
+        <a href="JavaScript:;" class="close_light">
+            <i class="gdtb"></i>
+            <i class="gdwz"></i>
+        </a>
+        <!-- 关灯效果结束 -->
+    </div>
+    <!-- 单个帖子区域 -->
+    <div class="layui-main all_posts">
+        <!-- 搜索框模块 -->
+        <div class="search">
+            <label for="tiezi">搜帖子:</label>
+            <input type="text" name="title" required lay-verify="required" placeholder="请输入您要搜索的帖子!" autocomplete="off"
+                class="layui-input searchkuang" id="tiezi">
+            <input class="searchkuang123" type="submit" />
+            <div class="hotsearch">
+                <span>热门搜索:</span>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("gamename", $(this).text().trim());'>暗黑地牢</a>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("ga mename", $(this).text().trim());'>堡垒之夜</a>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("gamename", $(this).text().trim());'>消逝的光芒</a>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("gamename", $(this).text().trim());'>实况足球</a>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("gamename", $(this).text().trim());'>王者荣耀</a>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("gamename", $(this).text().trim());'>只狼:影逝二度</a>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("gamename", $(this).text().trim());'>我的世界</a>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("gamename", $(this).text().trim());'>和平精英</a>
+                <a href="./gameinforanddocument.html"
+                    onclick='localStorage.setItem("gamename", $(this).text().trim());'>死亡搁浅</a>
+            </div>
+        </div>
+        <!-- 单个帖子模块 -->
+
+        <div class="alldocument">
+            <div class="layui-tab sywz">
+                <script type="text/html" id="html-data">
+                <!-- 帖子模块区域 -->
+                <ul class="layui-tab-title">
+                    <li class="layui-this zwnr">正文内容</li>
+                    <li class="yxxx">游戏信息</li>
+                    <li class="tzpl">帖子评论</li>
+                </ul>
+                <!-- 主体区域 -->
+                <div class="layui-tab-content">
+                    <!-- 主体区域内容 -->
+                    <div class="layui-tab-item layui-show">
+                        {{ each data}}
+                        <!-- 帖子标题 -->
+                        <div class="Mid2L_tit">
+                            <h1>{{ $value.title }}</h1>
+                            <div class="detail">
+                                <i>{{ $value.createtime | formatTime }}</i> 来源：游戏之家 作者：<i>{{ $value.username }}</i>
+                                编辑：<i>{{ $value.username }}</i>　浏览：{{ $value.views }}
+                            </div>
+                        </div>
+                        <!-- 帖子正文 -->
+                        <div class="postwb">
+                            <p>
+                                {{ $value.content }}
+                            </p>
+                            <p>
+                                {{ $value.content }}
+                            </p>
+                            <p><img src="./img/轮播图4.jpg" alt=""></p>
+                            <p>全新赛季内容包括：</p>
+                            <p>全新关卡；
+                                <br>
+                                基于现有关卡的40多种全新变化；
+                                <br>
+                                全新DLC内容；
+                                <br>
+                                哥斯拉、索尼克、无题大鹅联动游戏服装将上架普通商店！
+                                <br>
+                                未来几周将推出新的服装和更多内容!
+                                <br>
+                                目前，官方尚未公布关于3.5赛季的上线时间。
+                            </p>
+                        </div>
+
+
+                        <!-- 帖子点赞区域 -->
+                        <a class="diggBtn supportMe" style="cursor: pointer;"><i></i><span>{{ $value.zan
+                                }}</span><em>人喜欢</em></a>
+                        {{ /each }}
+                        {{ each data2}}
+                        <!-- 游戏信息面板 -->
+                        <div class="post_game">
+                            <div class="post_gameimg"><img src="./img/post_gameimg.jpg"
+                                    style="width: 110px;height: 152px;">
+                            </div>
+                            <ul>
+                                <li>
+                                    <p><a href="javasceipt:;">{{ $value.gamename }}</a></p>
+                                </li>
+                                <li>游戏类型: <i>{{ $value.gametype }}</i></li>
+                                <li>游戏开发商: <i>{{ $value.developers }}</i></li>
+                                <li>游戏简介: <i>{{ $value.synopsis }}</i></li>
+                                <li>开发时期: <i>{{ $value.gamedate | formatTime }}</i></li>
+                            </ul>
+                        </div>
+                        {{ /each }}
+                        <!-- 帖子评论模块 -->
+                        <div class="comment">
+                            <div class="hotcomment">
+                                热门评论
+                            </div>
+
+                            <!-- 评论 -->
+                            {{ each data3}}
+                            <div class="qbcomment">
+                                <div class="commenthead">
+                                    <img src="./img/单机游戏.jpg" alt="">
+                                </div>
+                                <div class="commentname"><a href="javascript:;">{{ $value.username }} :</a></div>
+                                <div class="commentneirong">{{ $value.content }}</div>
+                                <div class="commenttime">
+                                    <i>{{ $value.date | formatTime }}</i>
+                                    <a href="javascript:;" class="glyphicon glyphicon-thumbs-up commentdz123"></a>
+                                    <a href="javascript:;" class="huifu">回复</a>
+                                    <a href="javascript:;">举报</a>
+                                    <br>
+                                    <div class="form-group commenthf">
+                                        <span class="guanbi"><a href="javascript:;">X</a></span>
+                                        <input type="text" class="form-control" id="exampleInputEmail1"
+                                            placeholder="快来说两句!">
+                                        <button class="hf">评论</button>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ /each }}
+                        </div>
+
+                    </div>
+                </div>
+                </script>
+            </div>
+            <!-- 右侧区域 -->
+            <div class="sywz_img">
+                <!-- 轮播图 -->
+                <div class="layui-carousel" id="test1">
+                    <div carousel-item>
+                        <div><img src="./img/轮播图1.jpg" style="width: 100%; height: 100%;"></div>
+                        <div><img src="./img/轮播图2.jpg" style="width: 100%; height: 100%;"></div>
+                        <div><img src="./img/轮播图3.jpg" style="width: 100%; height: 100%;"></div>
+                        <div><img src="./img/轮播图4.jpg" style="width: 100%; height: 100%;"></div>
+                        <div><img src="./img/轮播图5.jpg" style="width: 100%; height: 100%;"></div>
+                    </div>
+                </div>
+                <script>
+                    layui.use('carousel', function () {
+                        var carousel = layui.carousel;
+                        carousel.render({
+                            elem: '#test1'
+                            , width: '100%'
+                            , arrow: 'always'
+                        });
+                    });
+                </script>
+                <!-- 排行榜模块 -->
+                <div class="phb">
+                    <div>
+                        <p class="phbhead">热门话题排行榜</p>
+                    </div>
+                    <ul class="phbnr">
+                        <li><i>1</i><a href="javascript:;">国产《无尽航线》销量未达预期 唯二程序员离开项目</a></li>
+                        <li><i>2</i><a href="javascript:;">国产《无尽航线》销量未达预期 唯二程序员离开项目</a></li>
+                        <li><i>3</i><a href="javascript:;">国产《无尽航线》销量未达预期 唯二程序员离开项目</a></li>
+                        <li><i>4</i><a href="javascript:;">国产《无尽航线》销量未达预期 唯二程序员离开项目</a></li>
+                        <li><i>5</i><a href="javascript:;">国产《无尽航线》销量未达预期 唯二程序员离开项目</a></li>
+                        <li><i>6</i><a href="javascript:;">国产《无尽航线》销量未达预期 唯二程序员离开项目</a></li>
+                        <li><i>7</i><a href="javascript:;">国产《无尽航线》销量未达预期 唯二程序员离开项目</a></li>
+                        <li><i>8</i><a href="javascript:;">国产《无尽航线》销量未达预期 唯二程序员离开项目</a></li>
+                        <li><i>9</i><a href="javascript:;">国产《无尽航线》销量未达预期 唯二程序员离开项目</a></li>
+                        <li><i>10</i><a href="javascript:;">国产《无尽航线》销量未达预期 唯二程序员离开项目</a></li>
+                    </ul>
+                </div>
+                <!-- 视频模块 -->
+                <video id="videoID" controls="controls" style="width:100%" autoplay muted loop="loop">
+                    <source src="./video/王者荣耀动画.mp4" type="video/mp4" />
+                </video>
+                <!-- 排行榜模块 -->
+                <div class="phb">
+                    <div>
+                        <p class="phbhead">热门游戏排行榜</p>
+                    </div>
+                    <ul class="phbnr">
+                        <li><i>1</i><a href="javascript:;">《生化危机8》女巫演员离世年仅39岁 卡普空发文悼念</a></li>
+                        <li><i>2</i><a href="javascript:;">《生化危机8》女巫演员离世年仅39岁 卡普空发文悼念</a></li>
+                        <li><i>3</i><a href="javascript:;">《生化危机8》女巫演员离世年仅39岁 卡普空发文悼念</a></li>
+                        <li><i>4</i><a href="javascript:;">《生化危机8》女巫演员离世年仅39岁 卡普空发文悼念</a></li>
+                        <li><i>5</i><a href="javascript:;">《生化危机8》女巫演员离世年仅39岁 卡普空发文悼念</a></li>
+                        <li><i>6</i><a href="javascript:;">《生化危机8》女巫演员离世年仅39岁 卡普空发文悼念</a></li>
+                        <li><i>7</i><a href="javascript:;">《生化危机8》女巫演员离世年仅39岁 卡普空发文悼念</a></li>
+                        <li><i>8</i><a href="javascript:;">《生化危机8》女巫演员离世年仅39岁 卡普空发文悼念</a></li>
+                        <li><i>9</i><a href="javascript:;">《生化危机8》女巫演员离世年仅39岁 卡普空发文悼念</a></li>
+                        <li><i>10</i><a href="javascript:;">《生化危机8》女巫演员离世年仅39岁 卡普空发文悼念</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="comment_title">
+            评论
+        </div>
+        <div class="cmt-textarea-con">
+            <textarea class="textarea-pl" name="textarea-pl" spellcheck="false" data-val="快来说两句吧！"
+                style="height: 120px;" placeholder="快来说两句吧！"></textarea>
+        </div>
+        <button class="commentfb" onclick='localStorage.setItem("content", $(".textarea-pl").val());'>
+            发布
+        </button>
+    </div>
+    <!-- 底部区域 -->
+    <div class="layui-bg-cyan">
+        <div class="layui-main foot">
+            <div class="row foot1">
+                <div class="col-md-3 foot-div">
+                    <ul>
+                        <li><a href="">单击游戏</a></li>
+                        <li><a href="">游戏资讯</a></li>
+                        <li><a href="">游戏测评</a></li>
+                        <li><a href="">游戏下载</a></li>
+                        <li><a href="">单击排行榜</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 foot-div">
+                    <ul>
+                        <li><a href="">网络游戏</a></li>
+                        <li><a href="">新闻资讯</a></li>
+                        <li><a href="">试玩测评</a></li>
+                        <li><a href="">产业观察</a></li>
+                        <li><a href="">精彩栏目</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 foot-div">
+                    <ul>
+                        <li><a href="">手机游戏</a></li>
+                        <li><a href="">手游频道</a></li>
+                        <li><a href="">手游攻略</a></li>
+                        <li><a href="">手游下载</a></li>
+                        <li><a href="">手游产业</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 foot-div">
+                    <ul>
+                        <li><a href="">主机游戏</a></li>
+                        <li><a href="">PS5</a></li>
+                        <li><a href="">XSX</a></li>
+                        <li><a href="">主机硬件</a></li>
+                        <li><a href="">电玩资讯</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row foot2">
+                <div class="col-md-1">友情链接:</div>
+                <div class="col-md-1"><a href="">单击游戏</a></div>
+                <div class="col-md-1"><a href="">多玩游戏</a></div>
+                <div class="col-md-1"><a href="">腾讯游戏</a></div>
+                <div class="col-md-1"><a href="">游侠网</a></div>
+                <div class="col-md-1"><a href="">迅游网</a></div>
+                <div class="col-md-1"><a href="">虎牙直播</a></div>
+                <div class="col-md-1"><a href="">游侠网络</a></div>
+                <div class="col-md-1"><a href="">游戏狗</a></div>
+                <div class="col-md-1"><a href="">斗鱼直播</a></div>
+                <div class="col-md-1"><a href="">07073网游</a></div>
+                <div class="col-md-1"><a href="">逗游网</a></div>
+            </div>
+            <div class="row foot3">
+                <div class="col-md-1"><a href="">PC6官方</a></div>
+                <div class="col-md-1"><a href="">91单击游戏</a></div>
+                <div class="col-md-1"><a href="">新浪爱问</a></div>
+                <div class="col-md-1"><a href="">贪玩游戏</a></div>
+                <div class="col-md-1"><a href="">3DM游戏网</a></div>
+                <div class="col-md-1"><a href="">龙珠直播</a></div>
+            </div>
+            <div class="mod_copyright">
+                <div class="links">
+                    <a href="#">关于本站</a> | <a href="#">网站招聘</a> | <a href="#">联系我们</a> | <a href="#">新浪微博</a>| <a
+                        href="#">手机客户端</a>
+                </div>
+                <div class="copyright">
+                    地址：陕西省西安市奥林匹克大厦A做8楼 邮编：100096 电话：400-618-4000 传真：029-89564386 邮箱: inlettkeji.cn <br>
+                    陕ICP备08001421号京公网安备110108007702
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

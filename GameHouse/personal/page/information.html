@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>用户基础信息</title>
+  <link rel="stylesheet" href="./../../assets/layui/css/layui.css">
+  <link rel="stylesheet" href="./../../css/page/information.css">
+  <script src="./../../assets/template-web.js"></script>
+  <script src="./../../assets/jquery-3.5.1.js"></script>
+  <script src="./../../js/page/information.js"></script>
+  <script src="./../../assets/layui/layui.all.js"></script>
+
+
+</head>
+
+<body class="layui-bg-gray">
+  <div class="layui-tab layui-tab-card">
+    <ul class="layui-tab-title">
+      <li class="layui-this">基础信息</li>
+    </ul>
+    <div class="layui-tab-content">
+      <div class="layui-tab-item layui-show">
+        <table class="layui-table" lay-skin="line" style="margin-left: 40px;">
+          <colgroup>
+            <col width="0">
+            <col width="200">
+          </colgroup>
+          <tbody class="tuijianmk">
+            <script type="text/html" id="maobanyinq">
+
+                    <tr>
+                      <td>登录账号</td>
+                      <td id="myuid">{{ userid }}</td>
+                    </tr>
+                    <tr>
+                      <td>用户昵称</td>
+                      <td id="myunick">{{ nick }}</td>
+                    </tr>
+                    <tr>
+                      <td>用户姓名</td>
+                      <td id="myuname">{{ username }}</td>
+                    </tr>
+                    <tr>
+                      <td>用户邮箱</td>
+                      <td id="myuemail">{{ email }}</td>
+                    </tr>
+
+            </script>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
